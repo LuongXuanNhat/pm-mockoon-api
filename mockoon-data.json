@@ -1,0 +1,955 @@
+{
+    "uuid": "5e93c98a-5082-43ea-9131-3efeb2a16d58",
+    "lastMigration": 33,
+    "name": "PM",
+    "endpointPrefix": "api",
+    "latency": 0,
+    "port": 3001,
+    "hostname": "",
+    "folders": [
+        {
+            "uuid": "883bdd0f-3fe0-4b37-84d1-0d9878ffbb59",
+            "name": "Đăng nhập",
+            "children": [
+                {
+                    "type": "route",
+                    "uuid": "94eb6630-c124-4c63-89a2-9520aea2384d"
+                },
+                {
+                    "type": "route",
+                    "uuid": "71c95713-6a8d-4dcc-b2b8-a8c29014d27d"
+                },
+                {
+                    "type": "route",
+                    "uuid": "55f5250a-71bd-443d-8486-53473aa8f3d1"
+                }
+            ]
+        },
+        {
+            "uuid": "9f746947-2671-4b28-9fee-bee587e547ae",
+            "name": "Dashboard",
+            "children": [
+                {
+                    "type": "route",
+                    "uuid": "819172d5-cba8-4d51-ada2-7ad5bc2980df"
+                },
+                {
+                    "type": "route",
+                    "uuid": "ce1e036f-f4a2-4162-a1bf-2d7405b7e9c8"
+                },
+                {
+                    "type": "route",
+                    "uuid": "c0525bab-8e1b-4d12-b3e0-e071960f6dd5"
+                },
+                {
+                    "type": "route",
+                    "uuid": "d335c686-f8bc-4407-9f6e-318743aa2ffa"
+                },
+                {
+                    "type": "route",
+                    "uuid": "21df2dca-7cef-4598-bbc0-a3dfaf6c0d0a"
+                }
+            ]
+        },
+        {
+            "uuid": "d5ad3400-2b8e-41ea-af5b-6dd197bc081d",
+            "name": "Project",
+            "children": [
+                {
+                    "type": "route",
+                    "uuid": "cc6ccc6c-60ea-4251-8dc0-e98d0debce15"
+                },
+                {
+                    "type": "route",
+                    "uuid": "25beefd1-7c1c-48fb-b93a-52778be11299"
+                },
+                {
+                    "type": "route",
+                    "uuid": "4071aba0-7a6d-4482-b647-4c0126afdbd6"
+                },
+                {
+                    "type": "route",
+                    "uuid": "7c333025-3957-4384-9e62-c9f6e16e97db"
+                }
+            ]
+        },
+        {
+            "uuid": "cb05a773-d61e-4a8d-80b1-5ee29597219b",
+            "name": "Task",
+            "children": [
+                {
+                    "type": "route",
+                    "uuid": "7ed67460-2103-4233-af5c-df8ba3d1e557"
+                },
+                {
+                    "type": "route",
+                    "uuid": "6198645c-7ba1-417c-81d4-06e96241cefe"
+                },
+                {
+                    "type": "route",
+                    "uuid": "d3c49335-25d7-44e7-9837-e905a12c927a"
+                },
+                {
+                    "type": "route",
+                    "uuid": "43bfdc10-be95-4591-bf22-ecf23ae5256e"
+                },
+                {
+                    "type": "route",
+                    "uuid": "874e2398-51f6-44d1-9c55-6e08790bcad6"
+                }
+            ]
+        },
+        {
+            "uuid": "c77e4a89-04c2-48a4-8e8b-a23c3ca84842",
+            "name": "Organization & workspace",
+            "children": [
+                {
+                    "type": "route",
+                    "uuid": "78265f61-a5b1-4442-b3e0-e6d380d9f82d"
+                },
+                {
+                    "type": "route",
+                    "uuid": "883ae60e-6c60-401d-9902-a151eba09a55"
+                }
+            ]
+        },
+        {
+            "uuid": "4004111e-0db0-494f-9dce-d586cab13abd",
+            "name": "Admin",
+            "children": [
+                {
+                    "type": "route",
+                    "uuid": "ae5a4535-2b5b-416d-b5f6-4f423dd7f3d2"
+                },
+                {
+                    "type": "route",
+                    "uuid": "2ac5ae99-338c-4f27-8f80-f867917d4d90"
+                },
+                {
+                    "type": "route",
+                    "uuid": "66b9be05-9c31-4297-9016-8130098fbf67"
+                }
+            ]
+        }
+    ],
+    "routes": [
+        {
+            "uuid": "55f5250a-71bd-443d-8486-53473aa8f3d1",
+            "type": "http",
+            "documentation": "Kiểm tra server",
+            "method": "get",
+            "endpoint": "health",
+            "responses": [
+                {
+                    "uuid": "4e8e1c94-8082-4287-b01c-6f03057e065d",
+                    "body": "{\n  \"success\": true,\n  \"message\": \"Server hoạt động ổn định\"\n}",
+                    "latency": 0,
+                    "statusCode": 200,
+                    "label": "Creates 10 random users, or the amount specified in the 'total' query param",
+                    "headers": [],
+                    "bodyType": "INLINE",
+                    "filePath": "",
+                    "databucketID": "",
+                    "sendFileAsBody": false,
+                    "rules": [],
+                    "rulesOperator": "OR",
+                    "disableTemplating": false,
+                    "fallbackTo404": false,
+                    "default": false,
+                    "crudKey": "id",
+                    "callbacks": []
+                }
+            ],
+            "responseMode": null,
+            "streamingMode": null,
+            "streamingInterval": 0
+        },
+        {
+            "uuid": "94eb6630-c124-4c63-89a2-9520aea2384d",
+            "type": "http",
+            "documentation": "Đăng nhập",
+            "method": "post",
+            "endpoint": "auth",
+            "responses": [
+                {
+                    "uuid": "c05b8a3b-e880-404a-8262-72570b65d5b1",
+                    "body": "{\r\n  \"success\": true,\r\n  \"data\": {\r\n    \"accessToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.mock.jwt.token\",\r\n    \"user\": {\r\n      \"id\": \"u-001\",\r\n      \"username\": \"xuannhat\",\r\n      \"fullName\": \"Lương Xuân Nhất\",\r\n      \"avatar\": \"https://cdn-media.sforum.vn/storage/app/media/thunguyen/hinh-nen-vui-ve-2.jpg\",\r\n      \"roles\": [1, 2, 3, 4],\r\n      \"role\": \"admin\",\r\n      \"email\": \"xuannhat@huongnghiepaau.com\",\r\n      \"orgRole\": \"org_admin\", \r\n      \"workspaces\": [\r\n        { \"id\": \"ws-01\", \"name\": \"Headquarters\", \"role\": \"workspace_owner\" }\r\n      ]\r\n    }\r\n  },\r\n  \"message\": \"Đăng nhập thành công\"\r\n}\r\n",
+                    "latency": 0,
+                    "statusCode": 200,
+                    "label": "",
+                    "headers": [],
+                    "bodyType": "INLINE",
+                    "filePath": "",
+                    "databucketID": "",
+                    "sendFileAsBody": false,
+                    "rules": [],
+                    "rulesOperator": "OR",
+                    "disableTemplating": false,
+                    "fallbackTo404": false,
+                    "default": true,
+                    "crudKey": "id",
+                    "callbacks": []
+                },
+                {
+                    "uuid": "12317449-5e13-4585-be76-e77db8634e4c",
+                    "body": "{\r\n  \"success\": false,\r\n  \"data\": null,\r\n  \"message\": \"Tên đăng nhập hoặc mật khẩu không đúng\"\r\n}\r\n",
+                    "latency": 0,
+                    "statusCode": 401,
+                    "label": "",
+                    "headers": [],
+                    "bodyType": "INLINE",
+                    "filePath": "",
+                    "databucketID": "",
+                    "sendFileAsBody": false,
+                    "rules": [],
+                    "rulesOperator": "OR",
+                    "disableTemplating": false,
+                    "fallbackTo404": false,
+                    "default": false,
+                    "crudKey": "id",
+                    "callbacks": []
+                },
+                {
+                    "uuid": "0fc6df69-031d-4732-a262-e2f7825a6a1a",
+                    "body": "{\r\n  \"success\": false,\r\n  \"data\": null,\r\n  \"message\": \"Tài khoản đã bị khóa\"\r\n}\r\n",
+                    "latency": 0,
+                    "statusCode": 403,
+                    "label": "",
+                    "headers": [],
+                    "bodyType": "INLINE",
+                    "filePath": "",
+                    "databucketID": "",
+                    "sendFileAsBody": false,
+                    "rules": [],
+                    "rulesOperator": "OR",
+                    "disableTemplating": false,
+                    "fallbackTo404": false,
+                    "default": false,
+                    "crudKey": "id",
+                    "callbacks": []
+                },
+                {
+                    "uuid": "2c32a7e4-3f8c-49f0-b475-32805c1f6419",
+                    "body": "{\r\n  \"success\": false,\r\n  \"data\": null,\r\n  \"message\": \"Máy chủ có vấn đề - Vui lòng liên hệ IT để hỗ trợ\"\r\n}\r\n",
+                    "latency": 0,
+                    "statusCode": 500,
+                    "label": "",
+                    "headers": [],
+                    "bodyType": "INLINE",
+                    "filePath": "",
+                    "databucketID": "",
+                    "sendFileAsBody": false,
+                    "rules": [],
+                    "rulesOperator": "OR",
+                    "disableTemplating": false,
+                    "fallbackTo404": false,
+                    "default": false,
+                    "crudKey": "id",
+                    "callbacks": []
+                }
+            ],
+            "responseMode": null,
+            "streamingMode": null,
+            "streamingInterval": 0
+        },
+        {
+            "uuid": "71c95713-6a8d-4dcc-b2b8-a8c29014d27d",
+            "type": "http",
+            "documentation": " (Dùng để lấy lại thông tin user khi F5 trang)",
+            "method": "get",
+            "endpoint": "auth/me",
+            "responses": [
+                {
+                    "uuid": "75428082-25d9-457a-aa89-d55400a6d558",
+                    "body": "{\r\n  \"success\": true,\r\n  \"data\": {\r\n    \"id\": \"u-001\",\r\n    \"username\": \"xuannhat\",\r\n    \"fullName\": \"Lương Xuân Nhất\",\r\n    \"avatar\": \"https://cdn-media.sforum.vn/storage/app/media/thunguyen/hinh-nen-vui-ve-2.jpg\",\r\n    \"roles\": [1, 2, 3, 4],\r\n    \"role\": \"admin\",\r\n    \"email\": \"xuannhat@huongnghiepaau.com\",\r\n    \"orgRole\": \"org_admin\", \r\n    \"workspaces\": [\r\n      { \"id\": \"ws-01\", \"name\": \"Headquarters\", \"role\": \"workspace_owner\" }\r\n    ]\r\n  },\r\n  \"message\": \"\"\r\n}",
+                    "latency": 0,
+                    "statusCode": 200,
+                    "label": "",
+                    "headers": [],
+                    "bodyType": "INLINE",
+                    "filePath": "",
+                    "databucketID": "",
+                    "sendFileAsBody": false,
+                    "rules": [],
+                    "rulesOperator": "OR",
+                    "disableTemplating": false,
+                    "fallbackTo404": false,
+                    "default": true,
+                    "crudKey": "id",
+                    "callbacks": []
+                }
+            ],
+            "responseMode": null,
+            "streamingMode": null,
+            "streamingInterval": 0
+        },
+        {
+            "uuid": "ce1e036f-f4a2-4162-a1bf-2d7405b7e9c8",
+            "type": "http",
+            "documentation": "Thẻ thống kê",
+            "method": "get",
+            "endpoint": "dashboard/stats",
+            "responses": [
+                {
+                    "uuid": "711f33be-9d91-49f4-adfc-483877d05b8f",
+                    "body": "  {\n    \"totalUsers\": { \"value\": 450, \"change\": 12, \"trend\": \"up\" },\n    \"activeProjects\": { \"value\": 32, \"change\": 5, \"trend\": \"up\" },\n    \"monthlyCost\": { \"value\": 12450, \"change\": -4, \"trend\": \"down\" },\n    \"systemHealth\": { \"value\": 98, \"change\": 0, \"trend\": \"neutral\" }\n  }\n  ",
+                    "latency": 0,
+                    "statusCode": 200,
+                    "label": "",
+                    "headers": [],
+                    "bodyType": "INLINE",
+                    "filePath": "",
+                    "databucketID": "",
+                    "sendFileAsBody": false,
+                    "rules": [],
+                    "rulesOperator": "OR",
+                    "disableTemplating": false,
+                    "fallbackTo404": false,
+                    "default": true,
+                    "crudKey": "id",
+                    "callbacks": []
+                }
+            ],
+            "responseMode": null,
+            "streamingMode": null,
+            "streamingInterval": 0
+        },
+        {
+            "uuid": "c0525bab-8e1b-4d12-b3e0-e071960f6dd5",
+            "type": "http",
+            "documentation": "Biểu đồ giá trị theo tháng",
+            "method": "get",
+            "endpoint": "dashboard/revenue",
+            "responses": [
+                {
+                    "uuid": "51b9cfbd-c876-4780-ac7c-19afd28059f2",
+                    "body": " \n  [\n    { \"month\": \"T1\", \"value\": 40 },\n    { \"month\": \"T2\", \"value\": 60 },\n    { \"month\": \"T3\", \"value\": 45 },\n    { \"month\": \"T4\", \"value\": 80 },\n    { \"month\": \"T5\", \"value\": 55 },\n    { \"month\": \"T6\", \"value\": 70 },\n    { \"month\": \"T7\", \"value\": 90 }\n  ]\n  ",
+                    "latency": 0,
+                    "statusCode": 200,
+                    "label": "",
+                    "headers": [],
+                    "bodyType": "INLINE",
+                    "filePath": "",
+                    "databucketID": "",
+                    "sendFileAsBody": false,
+                    "rules": [],
+                    "rulesOperator": "OR",
+                    "disableTemplating": false,
+                    "fallbackTo404": false,
+                    "default": true,
+                    "crudKey": "id",
+                    "callbacks": []
+                }
+            ],
+            "responseMode": null,
+            "streamingMode": null,
+            "streamingInterval": 0
+        },
+        {
+            "uuid": "d335c686-f8bc-4407-9f6e-318743aa2ffa",
+            "type": "http",
+            "documentation": "Hoạt động gần đây",
+            "method": "get",
+            "endpoint": "dashboard/activities",
+            "responses": [
+                {
+                    "uuid": "52c63a6c-384d-4421-8055-0e403e6c48ed",
+                    "body": "[\n    {\n      \"id\": 1,\n      \"user\": \"Lê Dev\",\n      \"avatar\": \"\",\n      \"action\": \"đã push code\",\n      \"target\": \"Backend Core\",\n      \"time\": \"2 phút trước\"\n    },\n    {\n      \"id\": 2,\n      \"user\": \"Trần HR\",\n      \"avatar\": \"\",\n      \"action\": \"thêm nhân sự\",\n      \"target\": \"Nguyễn Văn A\",\n      \"time\": \"1 giờ trước\"\n    },\n    {\n      \"id\": 3,\n      \"user\": \"Phạm PM\",\n      \"avatar\": \"\",\n      \"action\": \"đóng dự án\",\n      \"target\": \"Marketing Q1\",\n      \"time\": \"5 giờ trước\"\n    }\n  ]\n",
+                    "latency": 0,
+                    "statusCode": 200,
+                    "label": "",
+                    "headers": [],
+                    "bodyType": "INLINE",
+                    "filePath": "",
+                    "databucketID": "",
+                    "sendFileAsBody": false,
+                    "rules": [],
+                    "rulesOperator": "OR",
+                    "disableTemplating": false,
+                    "fallbackTo404": false,
+                    "default": true,
+                    "crudKey": "id",
+                    "callbacks": []
+                }
+            ],
+            "responseMode": null,
+            "streamingMode": null,
+            "streamingInterval": 0
+        },
+        {
+            "uuid": "d3c49335-25d7-44e7-9837-e905a12c927a",
+            "type": "http",
+            "documentation": "Task của tôi",
+            "method": "get",
+            "endpoint": "tasks/my-tasks",
+            "responses": [
+                {
+                    "uuid": "a87d586f-93e6-4361-97a6-ad6d41ff23dc",
+                    "body": " [\n    {\n      \"id\": \"t-14\",\n      \"title\": \"Tích hợp VNPay\",\n      \"status\": \"IN_PROGRESS\",\n      \"projectId\": 1,\n      \"projectName\": \"Xây dựng chatwoot\",\n      \"parentTaskId\": null,\n      \"parentTaskTitle\": null,\n      \"priority\": \"High\",\n      \"dueDate\": \"2024-05-20\",\n      \"description\": null\n    },\n    {\n      \"id\": \"t-12\",\n      \"title\": \"Viết Unit Test\",\n      \"status\": \"TODO\",\n      \"projectId\": 1,\n      \"projectName\": \"Xây dựng chatwoot\",\n      \"parentTaskId\": null,\n      \"parentTaskTitle\": null,\n      \"priority\": \"Medium\",\n      \"dueDate\": \"2024-05-22\",\n      \"description\": null\n    },\n    {\n      \"id\": \"t-13\",\n      \"title\": \"Fix bug CSS Safari\",\n      \"status\": \"DONE\",\n      \"projectId\": 1,\n      \"projectName\": \"Xây dựng chatwoot\",\n      \"parentTaskId\": null,\n      \"parentTaskTitle\": null,\n      \"priority\": \"Low\",\n      \"dueDate\": \"2024-05-10\",\n      \"description\": null\n    },\n    {\n    \"id\": \"t-1\",\n    \"title\": \"Tích hợp VNPay\",\n    \"status\": \"IN_PROGRESS\",\n    \"projectId\": 1,\n    \"projectName\": \"Xây dựng chatwoot\",\n    \"parentTaskId\": null,\n    \"parentTaskTitle\": null,\n    \"priority\": \"High\",\n    \"dueDate\": \"2024-05-20\",\n    \"description\": null\n  },\n  {\n    \"id\": \"t-2\",\n    \"title\": \"Viết Unit Test\",\n    \"status\": \"TODO\",\n    \"projectId\": 1,\n    \"projectName\": \"Xây dựng chatwoot\",\n    \"parentTaskId\": null,\n    \"parentTaskTitle\": null,\n    \"priority\": \"Medium\",\n    \"dueDate\": \"2024-05-22\",\n    \"description\": null\n  },\n  {\n    \"id\": \"t-3\",\n    \"title\": \"Fix bug CSS Safari\",\n    \"status\": \"DONE\",\n    \"projectId\": 1,\n    \"projectName\": \"Xây dựng chatwoot\",\n    \"parentTaskId\": null,\n    \"parentTaskTitle\": null,\n    \"priority\": \"Low\",\n    \"dueDate\": \"2024-05-10\",\n    \"description\": null\n  },\n  {\n    \"id\": \"t-4\",\n    \"title\": \"Thiết kế database schema\",\n    \"status\": \"DONE\",\n    \"projectId\": 1,\n    \"projectName\": \"Xây dựng chatwoot\",\n    \"parentTaskId\": null,\n    \"parentTaskTitle\": null,\n    \"priority\": \"High\",\n    \"dueDate\": \"2024-05-05\",\n    \"description\": null\n  },\n  {\n    \"id\": \"t-5\",\n    \"title\": \"Xây dựng API quản lý user\",\n    \"status\": \"IN_PROGRESS\",\n    \"projectId\": 1,\n    \"projectName\": \"Xây dựng chatwoot\",\n    \"parentTaskId\": null,\n    \"parentTaskTitle\": null,\n    \"priority\": \"High\",\n    \"dueDate\": \"2024-05-25\",\n    \"description\": null\n  },\n  {\n    \"id\": \"t-6\",\n    \"title\": \"Tích hợp Redis cache\",\n    \"status\": \"TODO\",\n    \"projectId\": 1,\n    \"projectName\": \"Xây dựng chatwoot\",\n    \"parentTaskId\": null,\n    \"parentTaskTitle\": null,\n    \"priority\": \"Medium\",\n    \"dueDate\": \"2024-05-28\",\n    \"description\": null\n  },\n  {\n    \"id\": \"t-7\",\n    \"title\": \"Cấu hình CI/CD pipeline\",\n    \"status\": \"TODO\",\n    \"projectId\": 1,\n    \"projectName\": \"Xây dựng chatwoot\",\n    \"parentTaskId\": null,\n    \"parentTaskTitle\": null,\n    \"priority\": \"High\",\n    \"dueDate\": \"2024-05-30\",\n    \"description\": null\n  },\n  {\n    \"id\": \"t-8\",\n    \"title\": \"Tối ưu query danh sách hội thoại\",\n    \"status\": \"IN_PROGRESS\",\n    \"projectId\": 1,\n    \"projectName\": \"Xây dựng chatwoot\",\n    \"parentTaskId\": null,\n    \"parentTaskTitle\": null,\n    \"priority\": \"Medium\",\n    \"dueDate\": \"2024-05-27\",\n    \"description\": null\n  },\n  {\n    \"id\": \"t-9\",\n    \"title\": \"Phân quyền theo role\",\n    \"status\": \"TODO\",\n    \"projectId\": 1,\n    \"projectName\": \"Xây dựng chatwoot\",\n    \"parentTaskId\": null,\n    \"parentTaskTitle\": null,\n    \"priority\": \"High\",\n    \"dueDate\": \"2024-06-01\",\n    \"description\": null\n  },\n  {\n    \"id\": \"t-10\",\n    \"title\": \"Viết tài liệu API\",\n    \"status\": \"TODO\",\n    \"projectId\": 1,\n    \"projectName\": \"Xây dựng chatwoot\",\n    \"parentTaskId\": null,\n    \"parentTaskTitle\": null,\n    \"priority\": \"Low\",\n    \"dueDate\": \"2024-06-03\",\n    \"description\": null\n  },\n  {\n    \"id\": \"t-11\",\n    \"title\": \"Kiểm thử hiệu năng hệ thống\",\n    \"status\": \"TODO\",\n    \"projectId\": 1,\n    \"projectName\": \"Xây dựng chatwoot\",\n    \"parentTaskId\": null,\n    \"parentTaskTitle\": null,\n    \"priority\": \"Medium\",\n    \"dueDate\": \"2024-06-05\",\n    \"description\": null\n  }\n  ]\n",
+                    "latency": 0,
+                    "statusCode": 200,
+                    "label": "",
+                    "headers": [],
+                    "bodyType": "INLINE",
+                    "filePath": "",
+                    "databucketID": "",
+                    "sendFileAsBody": false,
+                    "rules": [],
+                    "rulesOperator": "OR",
+                    "disableTemplating": false,
+                    "fallbackTo404": false,
+                    "default": true,
+                    "crudKey": "id",
+                    "callbacks": []
+                }
+            ],
+            "responseMode": null,
+            "streamingMode": null,
+            "streamingInterval": 0
+        },
+        {
+            "uuid": "4071aba0-7a6d-4482-b647-4c0126afdbd6",
+            "type": "http",
+            "documentation": "Dự án gần đây",
+            "method": "get",
+            "endpoint": "projects/recent",
+            "responses": [
+                {
+                    "uuid": "b76dd537-0ba2-403f-b521-cf652fa94e68",
+                    "body": " [\n    {\n      \"id\": \"p-1\",\n      \"name\": \"Mobile App Revamp\",\n      \"lastUpdated\": \"2 giờ trước\"\n    },\n    {\n      \"id\": \"p-2\",\n      \"name\": \"Internal Tool CRM\",\n      \"lastUpdated\": \"1 ngày trước\"\n    },\n    {\n      \"id\": \"p-3\",\n      \"name\": \"Website Landing Page\",\n      \"lastUpdated\": \"3 ngày trước\"\n    }\n  ]\n",
+                    "latency": 0,
+                    "statusCode": 200,
+                    "label": "",
+                    "headers": [],
+                    "bodyType": "INLINE",
+                    "filePath": "",
+                    "databucketID": "",
+                    "sendFileAsBody": false,
+                    "rules": [],
+                    "rulesOperator": "OR",
+                    "disableTemplating": false,
+                    "fallbackTo404": false,
+                    "default": true,
+                    "crudKey": "id",
+                    "callbacks": []
+                }
+            ],
+            "responseMode": null,
+            "streamingMode": null,
+            "streamingInterval": 0
+        },
+        {
+            "uuid": "21df2dca-7cef-4598-bbc0-a3dfaf6c0d0a",
+            "type": "http",
+            "documentation": "Dự án gần đây",
+            "method": "get",
+            "endpoint": "notifications",
+            "responses": [
+                {
+                    "uuid": "d850a914-e7da-4854-bfd0-4260db46e76f",
+                    "body": "[\n    {\n      \"id\": 1,\n      \"content\": \"Bạn được assign vào task #API-123\",\n      \"isRead\": false,\n      \"time\": \"10 phút trước\"\n    },\n    {\n      \"id\": 2,\n      \"content\": \"Deadline dự án CRM sắp đến\",\n      \"isRead\": true,\n      \"time\": \"2 tiếng trước\"\n    }\n  ]\n",
+                    "latency": 0,
+                    "statusCode": 200,
+                    "label": "",
+                    "headers": [],
+                    "bodyType": "INLINE",
+                    "filePath": "",
+                    "databucketID": "",
+                    "sendFileAsBody": false,
+                    "rules": [],
+                    "rulesOperator": "OR",
+                    "disableTemplating": false,
+                    "fallbackTo404": false,
+                    "default": true,
+                    "crudKey": "id",
+                    "callbacks": []
+                }
+            ],
+            "responseMode": null,
+            "streamingMode": null,
+            "streamingInterval": 0
+        },
+        {
+            "uuid": "7ed67460-2103-4233-af5c-df8ba3d1e557",
+            "type": "http",
+            "documentation": "Task gần đây của tôi",
+            "method": "get",
+            "endpoint": "tasks/my-recent-tasks",
+            "responses": [
+                {
+                    "uuid": "3aa36713-2766-49ef-9eea-90eef86106e0",
+                    "body": " [\n    {\n      \"id\": \"t-1\",\n      \"title\": \"Tích hợp VNPay\",\n      \"status\": \"IN_PROGRESS\",\n      \"projectId\": 1,\n      \"projectName\": \"Xây dựng chatwoot\",\n      \"parentTaskId\": null,\n      \"parentTaskTitle\": null,\n      \"priority\": \"High\",\n      \"dueDate\": \"2024-05-20\",\n      \"description\": null\n    },\n    {\n      \"id\": \"t-2\",\n      \"title\": \"Viết Unit Test\",\n      \"status\": \"TODO\",\n      \"projectId\": 1,\n      \"projectName\": \"Xây dựng chatwoot\",\n      \"parentTaskId\": null,\n      \"parentTaskTitle\": null,\n      \"priority\": \"Medium\",\n      \"dueDate\": \"2024-05-22\",\n      \"description\": null\n    },\n    {\n      \"id\": \"t-3\",\n      \"title\": \"Fix bug CSS Safari\",\n      \"status\": \"DONE\",\n      \"projectId\": 1,\n      \"projectName\": \"Xây dựng chatwoot\",\n      \"parentTaskId\": null,\n      \"parentTaskTitle\": null,\n      \"priority\": \"Low\",\n      \"dueDate\": \"2024-05-10\",\n      \"description\": null\n    }\n  ]\n",
+                    "latency": 0,
+                    "statusCode": 200,
+                    "label": "",
+                    "headers": [],
+                    "bodyType": "INLINE",
+                    "filePath": "",
+                    "databucketID": "",
+                    "sendFileAsBody": false,
+                    "rules": [],
+                    "rulesOperator": "OR",
+                    "disableTemplating": false,
+                    "fallbackTo404": false,
+                    "default": true,
+                    "crudKey": "id",
+                    "callbacks": []
+                }
+            ],
+            "responseMode": null,
+            "streamingMode": null,
+            "streamingInterval": 0
+        },
+        {
+            "uuid": "819172d5-cba8-4d51-ada2-7ad5bc2980df",
+            "type": "http",
+            "documentation": "Tổng thống kê",
+            "method": "get",
+            "endpoint": "dashboard/project-overview",
+            "responses": [
+                {
+                    "uuid": "35f0f0a6-0407-4533-b84b-a205d4a0ea37",
+                    "body": "{\r\n  \"totalProjects\": {\r\n    \"value\": 2,\r\n    \"label\": \"Tổng dự án\",\r\n    \"subtext\": \"1 đang thực hiện\",\r\n    \"type\": \"primary\"\r\n  },\r\n  \"totalTasks\": {\r\n    \"value\": 6,\r\n    \"label\": \"Tổng công việc\",\r\n    \"subtext\": \"3 đã hoàn thành\",\r\n    \"type\": \"success\"\r\n  },\r\n  \"inProgress\": {\r\n    \"value\": 1,\r\n    \"label\": \"Đang thực hiện\",\r\n    \"subtext\": \"Dự án đang hoạt động\",\r\n    \"type\": \"warning\"\r\n  },\r\n  \"overdue\": {\r\n    \"value\": 3,\r\n    \"label\": \"Quá hạn\",\r\n    \"subtext\": \"Công việc cần xử lý\",\r\n    \"type\": \"danger\"\r\n  }\r\n}",
+                    "latency": 0,
+                    "statusCode": 200,
+                    "label": "",
+                    "headers": [],
+                    "bodyType": "INLINE",
+                    "filePath": "",
+                    "databucketID": "",
+                    "sendFileAsBody": false,
+                    "rules": [],
+                    "rulesOperator": "OR",
+                    "disableTemplating": false,
+                    "fallbackTo404": false,
+                    "default": true,
+                    "crudKey": "id",
+                    "callbacks": []
+                }
+            ],
+            "responseMode": null,
+            "streamingMode": null,
+            "streamingInterval": 0
+        },
+        {
+            "uuid": "cc6ccc6c-60ea-4251-8dc0-e98d0debce15",
+            "type": "http",
+            "documentation": "Danh sách dự án",
+            "method": "get",
+            "endpoint": "projects",
+            "responses": [
+                {
+                    "uuid": "16adc40c-4a4a-4e0e-afae-d4e8eecc6e3a",
+                    "body": "[\r\n  {\r\n    \"id\": \"p1\",\r\n    \"name\": \"Marketing Q4\",\r\n    \"status\": \"ACTIVE\",\r\n    \"dueDate\": \"2024-12-31\",\r\n    \"members\": 5\r\n  },\r\n  {\r\n    \"id\": \"p2\",\r\n    \"name\": \"Website Rebranding\",\r\n    \"status\": \"ACTIVE\",\r\n    \"dueDate\": \"2024-10-15\",\r\n    \"members\": 8\r\n  },\r\n  {\r\n    \"id\": \"p3\",\r\n    \"name\": \"Mobile App v2\",\r\n    \"status\": \"ACTIVE\",\r\n    \"dueDate\": \"2024-11-30\",\r\n    \"members\": 6\r\n  },\r\n  {\r\n    \"id\": \"p4\",\r\n    \"name\": \"CRM Integration\",\r\n    \"status\": \"INACTIVE\",\r\n    \"dueDate\": \"2024-09-20\",\r\n    \"members\": 4\r\n  },\r\n  {\r\n    \"id\": \"p5\",\r\n    \"name\": \"Customer Support Automation\",\r\n    \"status\": \"ACTIVE\",\r\n    \"dueDate\": \"2025-01-31\",\r\n    \"members\": 7\r\n  },\r\n  {\r\n    \"id\": \"p6\",\r\n    \"name\": \"Internal HR System\",\r\n    \"status\": \"COMPLETED\",\r\n    \"dueDate\": \"2024-06-30\",\r\n    \"members\": 3\r\n  },\r\n  {\r\n    \"id\": \"p7\",\r\n    \"name\": \"Data Warehouse Setup\",\r\n    \"status\": \"ACTIVE\",\r\n    \"dueDate\": \"2025-03-31\",\r\n    \"members\": 5\r\n  },\r\n  {\r\n    \"id\": \"p8\",\r\n    \"name\": \"Security Audit 2024\",\r\n    \"status\": \"COMPLETED\",\r\n    \"dueDate\": \"2024-08-15\",\r\n    \"members\": 2\r\n  },\r\n  {\r\n    \"id\": \"p9\",\r\n    \"name\": \"AI Chatbot MVP\",\r\n    \"status\": \"ACTIVE\",\r\n    \"dueDate\": \"2024-11-10\",\r\n    \"members\": 6\r\n  },\r\n  {\r\n    \"id\": \"p10\",\r\n    \"name\": \"E-commerce Payment Upgrade\",\r\n    \"status\": \"INACTIVE\",\r\n    \"dueDate\": \"2024-10-05\",\r\n    \"members\": 4\r\n  },\r\n  {\r\n    \"id\": \"p11\",\r\n    \"name\": \"Analytics Dashboard\",\r\n    \"status\": \"ACTIVE\",\r\n    \"dueDate\": \"2024-12-15\",\r\n    \"members\": 5\r\n  },\r\n  {\r\n    \"id\": \"p12\",\r\n    \"name\": \"Cloud Cost Optimization\",\r\n    \"status\": \"ACTIVE\",\r\n    \"dueDate\": \"2025-02-28\",\r\n    \"members\": 3\r\n  }\r\n]\r\n",
+                    "latency": 0,
+                    "statusCode": 200,
+                    "label": "",
+                    "headers": [],
+                    "bodyType": "INLINE",
+                    "filePath": "",
+                    "databucketID": "",
+                    "sendFileAsBody": false,
+                    "rules": [],
+                    "rulesOperator": "OR",
+                    "disableTemplating": false,
+                    "fallbackTo404": false,
+                    "default": true,
+                    "crudKey": "id",
+                    "callbacks": []
+                }
+            ],
+            "responseMode": null,
+            "streamingMode": null,
+            "streamingInterval": 0
+        },
+        {
+            "uuid": "25beefd1-7c1c-48fb-b93a-52778be11299",
+            "type": "http",
+            "documentation": "Tạo",
+            "method": "post",
+            "endpoint": "projects",
+            "responses": [
+                {
+                    "uuid": "43d9b562-11d2-4791-bb45-15957731d7c9",
+                    "body": "",
+                    "latency": 0,
+                    "statusCode": 201,
+                    "label": "",
+                    "headers": [],
+                    "bodyType": "INLINE",
+                    "filePath": "",
+                    "databucketID": "",
+                    "sendFileAsBody": false,
+                    "rules": [],
+                    "rulesOperator": "OR",
+                    "disableTemplating": false,
+                    "fallbackTo404": false,
+                    "default": true,
+                    "crudKey": "id",
+                    "callbacks": []
+                }
+            ],
+            "responseMode": null,
+            "streamingMode": null,
+            "streamingInterval": 0
+        },
+        {
+            "uuid": "6198645c-7ba1-417c-81d4-06e96241cefe",
+            "type": "http",
+            "documentation": "Tạo",
+            "method": "post",
+            "endpoint": "task",
+            "responses": [
+                {
+                    "uuid": "d025f787-8d7d-4acd-b514-f5208d4de36f",
+                    "body": "{}",
+                    "latency": 0,
+                    "statusCode": 201,
+                    "label": "",
+                    "headers": [],
+                    "bodyType": "INLINE",
+                    "filePath": "",
+                    "databucketID": "",
+                    "sendFileAsBody": false,
+                    "rules": [],
+                    "rulesOperator": "OR",
+                    "disableTemplating": false,
+                    "fallbackTo404": false,
+                    "default": true,
+                    "crudKey": "id",
+                    "callbacks": []
+                }
+            ],
+            "responseMode": null,
+            "streamingMode": null,
+            "streamingInterval": 0
+        },
+        {
+            "uuid": "78265f61-a5b1-4442-b3e0-e6d380d9f82d",
+            "type": "http",
+            "documentation": "Lấy danh sách công ty/tổ chức",
+            "method": "get",
+            "endpoint": "organizations",
+            "responses": [
+                {
+                    "uuid": "15ba2d9a-d6ee-4f30-8083-7da6981fe074",
+                    "body": "[\r\n  {\r\n    \"id\": \"org-1\",\r\n    \"name\": \"Hướng Nghiệp Á Âu\",\r\n    \"slug\": \"huong-nghiep-a-au\",\r\n    \"logo\": \"https://github.com/shadcn.png\",\r\n    \"memberCount\": 350,\r\n    \"createdAt\": \"2023-01-01\"\r\n  },\r\n  {\r\n    \"id\": \"org-2\",\r\n    \"name\": \"Viettel Solutions\",\r\n    \"slug\": \"viettel-solutions\",\r\n    \"logo\": \"https://github.com/vercel.png\",\r\n    \"memberCount\": 300,\r\n    \"createdAt\": \"2023-05-15\"\r\n  },\r\n  {\r\n  \"id\": \"org-3\",\r\n  \"name\": \"FPT Software\",\r\n  \"slug\": \"fpt-software\",\r\n  \"logo\": \"https://upload.wikimedia.org/wikipedia/commons/5/5f/FPT_logo_2010.svg\",\r\n  \"memberCount\": 12000,\r\n  \"createdAt\": \"2022-08-01\"\r\n},\r\n{\r\n  \"id\": \"org-4\",\r\n  \"name\": \"VNPT Technology\",\r\n  \"slug\": \"vnpt-technology\",\r\n  \"logo\": \"https://upload.wikimedia.org/wikipedia/commons/6/63/VNPT_Logo.svg\",\r\n  \"memberCount\": 1500,\r\n  \"createdAt\": \"2021-11-20\"\r\n},\r\n{\r\n  \"id\": \"org-5\",\r\n  \"name\": \"Đại Vạn Phát\",\r\n  \"slug\": \"dai-van-phat\",\r\n  \"logo\": \"https://mms.img.susercontent.com/sg-11134004-7qven-lgnln02k1z0g49_tn\",\r\n  \"memberCount\": 50,\r\n  \"createdAt\": \"2021-11-20\"\r\n}\r\n\r\n\r\n]",
+                    "latency": 0,
+                    "statusCode": 200,
+                    "label": "",
+                    "headers": [],
+                    "bodyType": "INLINE",
+                    "filePath": "",
+                    "databucketID": "",
+                    "sendFileAsBody": false,
+                    "rules": [],
+                    "rulesOperator": "OR",
+                    "disableTemplating": false,
+                    "fallbackTo404": false,
+                    "default": true,
+                    "crudKey": "id",
+                    "callbacks": []
+                }
+            ],
+            "responseMode": null,
+            "streamingMode": null,
+            "streamingInterval": 0
+        },
+        {
+            "uuid": "883ae60e-6c60-401d-9902-a151eba09a55",
+            "type": "http",
+            "documentation": "Lấy danh sách không gian làm việc",
+            "method": "get",
+            "endpoint": "workspaces",
+            "responses": [
+                {
+                    "uuid": "2a0b1637-8e50-40e8-bd99-4c4bfe867c48",
+                    "body": "[\r\n  {\r\n    \"id\": \"ws-1\",\r\n    \"name\": \"Phòng Kỹ Thuật (Engineering)\",\r\n    \"organizationId\": \"org-1\",\r\n    \"organizationName\": \"FPT Software\",\r\n    \"description\": \"Đội ngũ phát triển phần mềm\",\r\n    \"projectCount\": 12\r\n  },\r\n  {\r\n    \"id\": \"ws-2\",\r\n    \"name\": \"Phòng Nhân Sự (HR)\",\r\n    \"organizationId\": \"org-1\",\r\n    \"organizationName\": \"FPT Software\",\r\n    \"description\": \"Tuyển dụng và đào tạo\",\r\n    \"projectCount\": 3\r\n  },\r\n  {\r\n    \"id\": \"ws-3\",\r\n    \"name\": \"Marketing Team\",\r\n    \"organizationId\": \"org-2\",\r\n    \"organizationName\": \"Viettel Solutions\",\r\n    \"description\": \"Chiến dịch quảng cáo Q4\",\r\n    \"projectCount\": 5\r\n  },\r\n  {\r\n    \"id\": \"ws-6\",\r\n    \"name\": \"Phòng Kinh doanh\",\r\n    \"organizationId\": \"org-5\",\r\n    \"organizationName\": \"Đại Vạn Phát\",\r\n    \"description\": \"Quản lý hoạt động bán hàng và khách hàng\",\r\n    \"projectCount\": 4\r\n  },\r\n  {\r\n    \"id\": \"ws-7\",\r\n    \"name\": \"Phòng Kỹ thuật\",\r\n    \"organizationId\": \"org-5\",\r\n    \"organizationName\": \"Đại Vạn Phát\",\r\n    \"description\": \"Triển khai và bảo trì hệ thống kỹ thuật\",\r\n    \"projectCount\": 6\r\n  },\r\n  {\r\n    \"id\": \"ws-8\",\r\n    \"name\": \"Phòng Hành chính - Nhân sự\",\r\n    \"organizationId\": \"org-5\",\r\n    \"organizationName\": \"Đại Vạn Phát\",\r\n    \"description\": \"Quản lý nhân sự và hành chính nội bộ\",\r\n    \"projectCount\": 2\r\n  },\r\n  {\r\n    \"id\": \"ws-9\",\r\n    \"name\": \"Phòng Công nghệ\",\r\n    \"organizationId\": \"org-4\",\r\n    \"organizationName\": \"VNPT Technology\",\r\n    \"description\": \"Nghiên cứu và phát triển giải pháp công nghệ\",\r\n    \"projectCount\": 7\r\n  },\r\n  {\r\n    \"id\": \"ws-10\",\r\n    \"name\": \"Phòng Vận hành\",\r\n    \"organizationId\": \"org-4\",\r\n    \"organizationName\": \"VNPT Technology\",\r\n    \"description\": \"Vận hành hệ thống và hỗ trợ kỹ thuật\",\r\n    \"projectCount\": 5\r\n  }\r\n]",
+                    "latency": 0,
+                    "statusCode": 200,
+                    "label": "",
+                    "headers": [],
+                    "bodyType": "INLINE",
+                    "filePath": "",
+                    "databucketID": "",
+                    "sendFileAsBody": false,
+                    "rules": [],
+                    "rulesOperator": "OR",
+                    "disableTemplating": false,
+                    "fallbackTo404": false,
+                    "default": true,
+                    "crudKey": "id",
+                    "callbacks": []
+                }
+            ],
+            "responseMode": null,
+            "streamingMode": null,
+            "streamingInterval": 0
+        },
+        {
+            "uuid": "ae5a4535-2b5b-416d-b5f6-4f423dd7f3d2",
+            "type": "http",
+            "documentation": "Danh sách user",
+            "method": "get",
+            "endpoint": "admin/users",
+            "responses": [
+                {
+                    "uuid": "97f7e7df-228d-41fb-b28c-73550e1588c2",
+                    "body": "[\r\n  {\r\n    \"id\": \"u-1\",\r\n    \"username\": \"nguyenvana\",\r\n    \"email\": \"a.nguyen@company.com\",\r\n    \"role\": \"org_admin\",\r\n    \"status\": \"active\",\r\n    \"lastActive\": \"2024-05-20T10:00:00Z\",\r\n    \"avatar\": \"https://github.com/shadcn.png\"\r\n  },\r\n  {\r\n    \"id\": \"u-2\",\r\n    \"username\": \"tranvanb\",\r\n    \"email\": \"b.tran@company.com\",\r\n    \"role\": \"member\",\r\n    \"status\": \"locked\",\r\n    \"lastActive\": \"2024-05-18T09:30:00Z\",\r\n    \"avatar\": \"\"\r\n  },\r\n  {\r\n    \"id\": \"u-3\",\r\n    \"username\": \"lethic\",\r\n    \"email\": \"c.le@company.com\",\r\n    \"role\": \"member\",\r\n    \"status\": \"active\",\r\n    \"lastActive\": \"2024-05-21T14:15:00Z\",\r\n    \"avatar\": \"https://github.com/vercel.png\"\r\n  },\r\n  {\r\n    \"id\": \"u-4\",\r\n    \"username\": \"phamvand\",\r\n    \"email\": \"d.pham@company.com\",\r\n    \"role\": \"org_admin\",\r\n    \"status\": \"active\",\r\n    \"lastActive\": \"2024-05-22T08:45:00Z\",\r\n    \"avatar\": \"https://github.com/shadcn.png\"\r\n  },\r\n  {\r\n    \"id\": \"u-5\",\r\n    \"username\": \"hoangminhe\",\r\n    \"email\": \"e.hoang@company.com\",\r\n    \"role\": \"member\",\r\n    \"status\": \"inactive\",\r\n    \"lastActive\": \"2024-04-30T16:20:00Z\",\r\n    \"avatar\": \"\"\r\n  },\r\n  {\r\n    \"id\": \"u-6\",\r\n    \"username\": \"doanhtuan\",\r\n    \"email\": \"t.doanh@company.com\",\r\n    \"role\": \"member\",\r\n    \"status\": \"active\",\r\n    \"lastActive\": \"2024-05-23T11:05:00Z\",\r\n    \"avatar\": \"https://github.com/shadcn.png\"\r\n  }\r\n]",
+                    "latency": 0,
+                    "statusCode": 200,
+                    "label": "",
+                    "headers": [],
+                    "bodyType": "INLINE",
+                    "filePath": "",
+                    "databucketID": "",
+                    "sendFileAsBody": false,
+                    "rules": [],
+                    "rulesOperator": "OR",
+                    "disableTemplating": false,
+                    "fallbackTo404": false,
+                    "default": true,
+                    "crudKey": "id",
+                    "callbacks": []
+                }
+            ],
+            "responseMode": null,
+            "streamingMode": null,
+            "streamingInterval": 0
+        },
+        {
+            "uuid": "2ac5ae99-338c-4f27-8f80-f867917d4d90",
+            "type": "http",
+            "documentation": "Chi tiết user + Hierarchy",
+            "method": "get",
+            "endpoint": "admin/users/u-1",
+            "responses": [
+                {
+                    "uuid": "ed9bf5a1-d26b-432e-bfc7-b2c82e8dd95c",
+                    "body": "{\r\n  \"id\": \"u-1\",\r\n  \"username\": \"nguyenvana\",\r\n  \"email\": \"a.nguyen@company.com\",\r\n  \"role\": \"org_admin\",\r\n  \"status\": \"active\",\r\n  \"joinedAt\": \"2023-01-01\",\r\n  \"access\": {\r\n    \"organizations\": [\r\n      { \"id\": \"org-1\", \"name\": \"FPT Software\", \"role\": \"admin\" }\r\n    ],\r\n    \"workspaces\": [\r\n      { \"id\": \"ws-1\", \"name\": \"Engineering\", \"orgName\": \"FPT Software\" }\r\n    ],\r\n    \"projects\": [\r\n      { \"id\": \"p-1\", \"name\": \"Banking App\", \"wsName\": \"Engineering\" }\r\n    ]\r\n  }\r\n}",
+                    "latency": 0,
+                    "statusCode": 200,
+                    "label": "",
+                    "headers": [],
+                    "bodyType": "INLINE",
+                    "filePath": "",
+                    "databucketID": "",
+                    "sendFileAsBody": false,
+                    "rules": [],
+                    "rulesOperator": "OR",
+                    "disableTemplating": false,
+                    "fallbackTo404": false,
+                    "default": true,
+                    "crudKey": "id",
+                    "callbacks": []
+                }
+            ],
+            "responseMode": null,
+            "streamingMode": null,
+            "streamingInterval": 0
+        },
+        {
+            "uuid": "66b9be05-9c31-4297-9016-8130098fbf67",
+            "type": "http",
+            "documentation": "Cài đặt",
+            "method": "get",
+            "endpoint": "admin/settings",
+            "responses": [
+                {
+                    "uuid": "cf48ad02-fe0a-4f21-80d5-4f2c63c6e405",
+                    "body": "{\r\n  \"general\": { \"siteName\": \"Trello Enterprise\", \"language\": \"vi\", \"timezone\": \"GMT+7\" },\r\n  \"theme\": { \"mode\": \"light\", \"primaryColor\": \"blue\" },\r\n  \"notifications\": { \"emailDigest\": true, \"pushEnabled\": false }\r\n}",
+                    "latency": 0,
+                    "statusCode": 200,
+                    "label": "",
+                    "headers": [],
+                    "bodyType": "INLINE",
+                    "filePath": "",
+                    "databucketID": "",
+                    "sendFileAsBody": false,
+                    "rules": [],
+                    "rulesOperator": "OR",
+                    "disableTemplating": false,
+                    "fallbackTo404": false,
+                    "default": true,
+                    "crudKey": "id",
+                    "callbacks": []
+                }
+            ],
+            "responseMode": null,
+            "streamingMode": null,
+            "streamingInterval": 0
+        },
+        {
+            "uuid": "43bfdc10-be95-4591-bf22-ecf23ae5256e",
+            "type": "http",
+            "documentation": "Khi người dùng thả thẻ bài (Drop), API này sẽ được gọi.",
+            "method": "get",
+            "endpoint": "tasks/:taskId/move",
+            "responses": [
+                {
+                    "uuid": "fd356f0f-8308-4cb3-afcd-6d17f4dadc7a",
+                    "body": "{\r\n  \"success\": true,\r\n  \"message\": \"Task moved successfully\",\r\n  \"data\": {\r\n    \"id\": \"task-1\",\r\n    \"statusId\": \"status-progress\",\r\n    \"position\": 1500,\r\n    \"updatedAt\": \"2024-10-25T09:00:00Z\"\r\n  }\r\n}",
+                    "latency": 0,
+                    "statusCode": 200,
+                    "label": "",
+                    "headers": [],
+                    "bodyType": "INLINE",
+                    "filePath": "",
+                    "databucketID": "",
+                    "sendFileAsBody": false,
+                    "rules": [],
+                    "rulesOperator": "OR",
+                    "disableTemplating": false,
+                    "fallbackTo404": false,
+                    "default": true,
+                    "crudKey": "id",
+                    "callbacks": []
+                }
+            ],
+            "responseMode": null,
+            "streamingMode": null,
+            "streamingInterval": 0
+        },
+        {
+            "uuid": "7c333025-3957-4384-9e62-c9f6e16e97db",
+            "type": "http",
+            "documentation": "API quan trọng nhất để init trang kanban",
+            "method": "get",
+            "endpoint": "projects/:projectId/kanban",
+            "responses": [
+                {
+                    "uuid": "70b2810a-8a00-405a-8359-91e23f9b2c9a",
+                    "body": "{\r\n  \"success\": true,\r\n  \"data\": {\r\n    \"columns\": [\r\n      {\r\n        \"id\": \"status-todo\",\r\n        \"name\": \"To Do\",\r\n        \"color\": \"#e2e8f0\",\r\n        \"order\": 1\r\n      },\r\n      {\r\n        \"id\": \"status-progress\",\r\n        \"name\": \"In Progress\",\r\n        \"color\": \"#3b82f6\",\r\n        \"order\": 2\r\n      },\r\n      {\r\n        \"id\": \"status-review\",\r\n        \"name\": \"In Review\",\r\n        \"color\": \"#eab308\",\r\n        \"order\": 3\r\n      },\r\n      {\r\n        \"id\": \"status-done\",\r\n        \"name\": \"Done\",\r\n        \"color\": \"#22c55e\",\r\n        \"order\": 4\r\n      }\r\n    ],\r\n    \"tasks\": [\r\n      {\r\n        \"id\": \"task-1\",\r\n        \"title\": \"Thiết kế UI màn hình Dashboard\",\r\n        \"description\": \"Sử dụng Figma, follow design system Shadcn\",\r\n        \"projectId\": \"proj-1\",\r\n        \"statusId\": \"status-todo\",\r\n        \"priority\": \"HIGH\",\r\n        \"dueDate\": \"2024-12-20T10:00:00Z\",\r\n        \"position\": 1000,\r\n        \"assignees\": [\r\n          { \"id\": \"u1\", \"name\": \"Nguyễn Văn A\", \"avatarUrl\": \"https://i.pravatar.cc/150?u=a\" }\r\n        ],\r\n        \"subtasksCount\": 5,\r\n        \"subtasksCompleted\": 2,\r\n        \"commentsCount\": 3,\r\n        \"attachmentsCount\": 1\r\n      },\r\n      {\r\n        \"id\": \"task-2\",\r\n        \"title\": \"Dựng API Authentication\",\r\n        \"projectId\": \"proj-1\",\r\n        \"statusId\": \"status-progress\",\r\n        \"priority\": \"URGENT\",\r\n        \"dueDate\": \"2024-12-18T10:00:00Z\",\r\n        \"position\": 2000,\r\n        \"assignees\": [\r\n          { \"id\": \"u2\", \"name\": \"Trần Thị B\", \"avatarUrl\": \"https://i.pravatar.cc/150?u=b\" },\r\n          { \"id\": \"u1\", \"name\": \"Nguyễn Văn A\", \"avatarUrl\": \"https://i.pravatar.cc/150?u=a\" }\r\n        ],\r\n        \"subtasksCount\": 0,\r\n        \"subtasksCompleted\": 0,\r\n        \"commentsCount\": 1,\r\n        \"attachmentsCount\": 0\r\n      },\r\n      {\r\n        \"id\": \"task-3\",\r\n        \"title\": \"Fix bug login layout shift\",\r\n        \"projectId\": \"proj-1\",\r\n        \"statusId\": \"status-progress\",\r\n        \"priority\": \"LOW\",\r\n        \"dueDate\": null,\r\n        \"position\": 3000,\r\n        \"assignees\": [],\r\n        \"subtasksCount\": 0,\r\n        \"subtasksCompleted\": 0,\r\n        \"commentsCount\": 0,\r\n        \"attachmentsCount\": 0\r\n      },\r\n      {\r\n        \"id\": \"task-4\",\r\n        \"title\": \"Deploy Staging Environment\",\r\n        \"projectId\": \"proj-1\",\r\n        \"statusId\": \"status-done\",\r\n        \"priority\": \"NORMAL\",\r\n        \"dueDate\": \"2024-12-15T10:00:00Z\",\r\n        \"position\": 1000,\r\n        \"assignees\": [\r\n          { \"id\": \"u3\", \"name\": \"DevOps Guy\", \"avatarUrl\": \"https://i.pravatar.cc/150?u=c\" }\r\n        ],\r\n        \"subtasksCount\": 3,\r\n        \"subtasksCompleted\": 3,\r\n        \"commentsCount\": 5,\r\n        \"attachmentsCount\": 2\r\n      }\r\n    ]\r\n  }\r\n}",
+                    "latency": 0,
+                    "statusCode": 200,
+                    "label": "",
+                    "headers": [],
+                    "bodyType": "INLINE",
+                    "filePath": "",
+                    "databucketID": "",
+                    "sendFileAsBody": false,
+                    "rules": [],
+                    "rulesOperator": "OR",
+                    "disableTemplating": false,
+                    "fallbackTo404": false,
+                    "default": true,
+                    "crudKey": "id",
+                    "callbacks": []
+                }
+            ],
+            "responseMode": null,
+            "streamingMode": null,
+            "streamingInterval": 0
+        },
+        {
+            "uuid": "874e2398-51f6-44d1-9c55-6e08790bcad6",
+            "type": "http",
+            "documentation": "Modal chi tiết, trả về full fields (Subtasks, Logs, Time...).",
+            "method": "get",
+            "endpoint": "tasks/:taskId",
+            "responses": [
+                {
+                    "uuid": "54da0005-b23a-44a3-a7c7-7b74bba3752b",
+                    "body": "{\r\n  \"success\": true,\r\n  \"data\": {\r\n    \"id\": \"task-1\",\r\n    \"title\": \"Thiết kế UI màn hình Dashboard\",\r\n    \"description\": \"Mô tả chi tiết bằng Markdown...\",\r\n    \"subtasks\": [\r\n      {\r\n        \"id\": \"sub-1\",\r\n        \"title\": \"Vẽ Wireframe\",\r\n        \"completed\": true\r\n      },\r\n      {\r\n        \"id\": \"sub-2\",\r\n        \"title\": \"Chọn màu sắc\",\r\n        \"completed\": false\r\n      }\r\n    ],\r\n    \"checklists\": [\r\n      {\r\n        \"id\": \"cl-1\",\r\n        \"title\": \"Review Requirements\",\r\n        \"items\": [\r\n           {\"id\": \"i1\", \"content\": \"Check mobile view\", \"completed\": false}\r\n        ]\r\n      }\r\n    ],\r\n    \"comments\": [],\r\n    \"activities\": []\r\n  }\r\n}",
+                    "latency": 0,
+                    "statusCode": 200,
+                    "label": "",
+                    "headers": [],
+                    "bodyType": "INLINE",
+                    "filePath": "",
+                    "databucketID": "",
+                    "sendFileAsBody": false,
+                    "rules": [],
+                    "rulesOperator": "OR",
+                    "disableTemplating": false,
+                    "fallbackTo404": false,
+                    "default": true,
+                    "crudKey": "id",
+                    "callbacks": []
+                }
+            ],
+            "responseMode": null,
+            "streamingMode": null,
+            "streamingInterval": 0
+        }
+    ],
+    "rootChildren": [
+        {
+            "type": "folder",
+            "uuid": "9f746947-2671-4b28-9fee-bee587e547ae"
+        },
+        {
+            "type": "folder",
+            "uuid": "883bdd0f-3fe0-4b37-84d1-0d9878ffbb59"
+        },
+        {
+            "type": "folder",
+            "uuid": "d5ad3400-2b8e-41ea-af5b-6dd197bc081d"
+        },
+        {
+            "type": "folder",
+            "uuid": "cb05a773-d61e-4a8d-80b1-5ee29597219b"
+        },
+        {
+            "type": "folder",
+            "uuid": "c77e4a89-04c2-48a4-8e8b-a23c3ca84842"
+        },
+        {
+            "type": "folder",
+            "uuid": "4004111e-0db0-494f-9dce-d586cab13abd"
+        }
+    ],
+    "proxyMode": false,
+    "proxyHost": "",
+    "proxyRemovePrefix": false,
+    "tlsOptions": {
+        "enabled": false,
+        "type": "CERT",
+        "pfxPath": "",
+        "certPath": "",
+        "keyPath": "",
+        "caPath": "",
+        "passphrase": ""
+    },
+    "cors": true,
+    "headers": [
+        {
+            "key": "Content-Type",
+            "value": "application/json"
+        },
+        {
+            "key": "Access-Control-Allow-Origin",
+            "value": "*"
+        },
+        {
+            "key": "Access-Control-Allow-Methods",
+            "value": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+        },
+        {
+            "key": "Access-Control-Allow-Headers",
+            "value": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+        }
+    ],
+    "proxyReqHeaders": [
+        {
+            "key": "",
+            "value": ""
+        }
+    ],
+    "proxyResHeaders": [
+        {
+            "key": "",
+            "value": ""
+        }
+    ],
+    "data": [
+        {
+            "uuid": "97e231dd-ddaa-4955-82df-8d0b5a234533",
+            "id": "71zg",
+            "name": "Users",
+            "documentation": "",
+            "value": "[\n  {{#repeat 50}}\n  {\n    \"id\": \"{{faker 'string.uuid'}}\",\n    \"username\": \"{{faker 'internet.userName'}}\"\n  }\n  {{/repeat}}\n]"
+        }
+    ],
+    "callbacks": []
+}
