@@ -95,7 +95,11 @@
                 },
                 {
                     "type": "route",
-                    "uuid": "874e2398-51f6-44d1-9c55-6e08790bcad6"
+                    "uuid": "993b01aa-9400-4158-a01c-6743638752eb"
+                },
+                {
+                    "type": "route",
+                    "uuid": "6e92f3fe-f693-466f-aa00-37253f26d035"
                 }
             ]
         },
@@ -842,15 +846,46 @@
             "streamingInterval": 0
         },
         {
-            "uuid": "874e2398-51f6-44d1-9c55-6e08790bcad6",
+            "uuid": "993b01aa-9400-4158-a01c-6743638752eb",
             "type": "http",
-            "documentation": "Modal chi tiết, trả về full fields (Subtasks, Logs, Time...).",
+            "documentation": "chi tiết Task khi click vào card.",
             "method": "get",
             "endpoint": "tasks/:taskId",
             "responses": [
                 {
-                    "uuid": "54da0005-b23a-44a3-a7c7-7b74bba3752b",
-                    "body": "{\r\n  \"success\": true,\r\n  \"data\": {\r\n    \"id\": \"task-1\",\r\n    \"title\": \"Thiết kế UI màn hình Dashboard\",\r\n    \"description\": \"Mô tả chi tiết bằng Markdown...\",\r\n    \"subtasks\": [\r\n      {\r\n        \"id\": \"sub-1\",\r\n        \"title\": \"Vẽ Wireframe\",\r\n        \"completed\": true\r\n      },\r\n      {\r\n        \"id\": \"sub-2\",\r\n        \"title\": \"Chọn màu sắc\",\r\n        \"completed\": false\r\n      }\r\n    ],\r\n    \"checklists\": [\r\n      {\r\n        \"id\": \"cl-1\",\r\n        \"title\": \"Review Requirements\",\r\n        \"items\": [\r\n           {\"id\": \"i1\", \"content\": \"Check mobile view\", \"completed\": false}\r\n        ]\r\n      }\r\n    ],\r\n    \"comments\": [],\r\n    \"activities\": []\r\n  }\r\n}",
+                    "uuid": "c4bfa4ae-29ed-4db4-aaf3-11f405bf9e9f",
+                    "body": "{\r\n  \"success\": true,\r\n  \"data\": {\r\n    \"id\": \"task-detail-1\",\r\n    \"title\": \"Nghiên cứu và tích hợp thư viện Drag & Drop\",\r\n    \"description\": \"<p>Cần nghiên cứu kỹ <strong>@dnd-kit</strong> vì thư viện này hỗ trợ accessibility tốt hơn react-beautiful-dnd.</p><p>Các yêu cầu chính:</p><ul><li>Sortable list dọc (Column)</li><li>Sortable list ngang (Board)</li><li>Hỗ trợ mobile touch</li></ul>\",\r\n    \"projectId\": \"proj-1\",\r\n    \"statusId\": \"status-progress\",\r\n    \"parentId\": null,\r\n    \"rootTaskId\": \"task-detail-1\",\r\n    \r\n    \"priority\": \"HIGH\",\r\n    \"visibility\": \"team\",\r\n    \r\n    \"startDate\": \"2024-01-20T08:00:00Z\",\r\n    \"dueDate\": \"2024-01-25T17:00:00Z\",\r\n    \"completedAt\": null,\r\n    \"createdAt\": \"2024-01-19T08:00:00Z\",\r\n    \"updatedAt\": \"2024-01-21T10:30:00Z\",\r\n    \"attachmentsCount\": 2,\r\n\r\n    \"creator\": {\r\n      \"id\": \"u1\",\r\n      \"name\": \"Admin User\",\r\n      \"avatarUrl\": \"https://github.com/shadcn.png\"\r\n    },\r\n\r\n    \"assignees\": [\r\n      {\r\n        \"id\": \"u2\",\r\n        \"name\": \"Frontend Dev\",\r\n        \"avatarUrl\": \"https://api.dicebear.com/7.x/avataaars/svg?seed=Felix\"\r\n      },\r\n      {\r\n        \"id\": \"u3\",\r\n        \"name\": \"Designer\",\r\n        \"avatarUrl\": \"https://api.dicebear.com/7.x/avataaars/svg?seed=Aneka\"\r\n      }\r\n    ],\r\n\r\n    \"watchers\": [\r\n      { \"id\": \"u1\", \"name\": \"Admin User\" }\r\n    ],\r\n\r\n    \"labels\": [\r\n      { \"id\": \"l1\", \"name\": \"Frontend\", \"color\": \"#3b82f6\" },\r\n      { \"id\": \"l2\", \"name\": \"Research\", \"color\": \"#a855f7\" }\r\n    ],\r\n\r\n    \"checklists\": [\r\n      {\r\n        \"id\": \"cl-1\",\r\n        \"title\": \"Tiêu chí nghiệm thu\",\r\n        \"items\": [\r\n          { \"id\": \"item-1\", \"title\": \"Cài đặt package @dnd-kit/core\", \"isChecked\": true, \"assignee\": null },\r\n          { \"id\": \"item-2\", \"title\": \"Tạo component Draggable\", \"isChecked\": true, \"assignee\": null },\r\n          { \"id\": \"item-3\", \"title\": \"Xử lý animation mượt mà\", \"isChecked\": false, \"assignee\": {\"id\": \"u2\", \"name\": \"Frontend Dev\"} }\r\n        ]\r\n      }\r\n    ],\r\n\r\n    \"subtasks\": [\r\n      {\r\n        \"id\": \"sub-1\",\r\n        \"title\": \"Đọc tài liệu Sortable Context\",\r\n        \"statusId\": \"status-done\",\r\n        \"priority\": \"NORMAL\",\r\n        \"assignees\": [],\r\n        \"dueDate\": null,\r\n        \"completed\": true\r\n      },\r\n      {\r\n        \"id\": \"sub-2\",\r\n        \"title\": \"Implement Sensors (Mouse/Touch)\",\r\n        \"statusId\": \"status-todo\",\r\n        \"priority\": \"HIGH\",\r\n        \"assignees\": [{\"id\": \"u2\", \"name\": \"Frontend Dev\"}],\r\n        \"dueDate\": \"2024-01-24T00:00:00Z\",\r\n        \"completed\": false\r\n      }\r\n    ]\r\n  }\r\n}",
+                    "latency": 0,
+                    "statusCode": 200,
+                    "label": "",
+                    "headers": [],
+                    "bodyType": "INLINE",
+                    "filePath": "",
+                    "databucketID": "",
+                    "sendFileAsBody": false,
+                    "rules": [],
+                    "rulesOperator": "OR",
+                    "disableTemplating": false,
+                    "fallbackTo404": false,
+                    "default": true,
+                    "crudKey": "id",
+                    "callbacks": []
+                }
+            ],
+            "responseMode": null,
+            "streamingMode": null,
+            "streamingInterval": 0
+        },
+        {
+            "uuid": "6e92f3fe-f693-466f-aa00-37253f26d035",
+            "type": "http",
+            "documentation": "để lấy lịch sử/bình luận (thường load riêng để tối ưu performance, nhưng nếu thích gộp vào API trên cũng được). Ở đây tôi tách ra cho chuyên nghiệp.",
+            "method": "get",
+            "endpoint": "tasks/:taskId/activities",
+            "responses": [
+                {
+                    "uuid": "38f0e687-c97d-4f53-b818-0ef3c81bde9b",
+                    "body": "{\r\n  \"success\": true,\r\n  \"data\": [\r\n    {\r\n      \"id\": \"act-1\",\r\n      \"taskId\": \"task-detail-1\",\r\n      \"type\": \"history\",\r\n      \"actor\": { \"id\": \"u1\", \"name\": \"Admin User\", \"avatarUrl\": \"https://github.com/shadcn.png\" },\r\n      \"createdAt\": \"2024-01-20T08:00:00Z\",\r\n      \"field\": \"created\",\r\n      \"content\": \"đã tạo thẻ này\"\r\n    },\r\n    {\r\n      \"id\": \"act-2\",\r\n      \"taskId\": \"task-detail-1\",\r\n      \"type\": \"history\",\r\n      \"actor\": { \"id\": \"u2\", \"name\": \"Frontend Dev\", \"avatarUrl\": \"https://api.dicebear.com/7.x/avataaars/svg?seed=Felix\" },\r\n      \"createdAt\": \"2024-01-20T09:15:00Z\",\r\n      \"field\": \"priority\",\r\n      \"oldValue\": \"NORMAL\",\r\n      \"newValue\": \"HIGH\",\r\n      \"content\": \"đã thay đổi độ ưu tiên\"\r\n    },\r\n    {\r\n      \"id\": \"act-3\",\r\n      \"taskId\": \"task-detail-1\",\r\n      \"type\": \"comment\",\r\n      \"actor\": { \"id\": \"u3\", \"name\": \"Designer\", \"avatarUrl\": \"https://api.dicebear.com/7.x/avataaars/svg?seed=Aneka\" },\r\n      \"createdAt\": \"2024-01-21T10:00:00Z\",\r\n      \"content\": \"Mình đã cập nhật lại UI design trên Figma rồi nhé, mọi người check lại màu sắc shadow khi drag.\"\r\n    }\r\n  ]\r\n}",
                     "latency": 0,
                     "statusCode": 200,
                     "label": "",
