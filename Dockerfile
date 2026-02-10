@@ -5,7 +5,5 @@ COPY mockoon-data.json .
 
 EXPOSE 3000
 
-ENTRYPOINT ["mockoon-cli"]
-# CMD ["start", "-d", "mockoon-data.json", "-p", "3000"]
-CMD ["start", "-d", "mockoon-data.json", "-p", "${PORT}"]
-
+ENTRYPOINT ["sh", "-c"]
+CMD ["mockoon-cli start -d mockoon-data.json -p $PORT"]
