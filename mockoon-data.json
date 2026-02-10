@@ -783,7 +783,7 @@
             "uuid": "43bfdc10-be95-4591-bf22-ecf23ae5256e",
             "type": "http",
             "documentation": "Khi người dùng thả thẻ bài (Drop), API này sẽ được gọi.",
-            "method": "get",
+            "method": "patch",
             "endpoint": "tasks/:taskId/move",
             "responses": [
                 {
